@@ -9,6 +9,9 @@ $(call inherit-product, device/xiaomi/mars/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Camera
+$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := mars
 PRODUCT_MANUFACTURER := Xiaomi
