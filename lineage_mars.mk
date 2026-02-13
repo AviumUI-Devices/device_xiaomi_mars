@@ -15,6 +15,14 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := M2102K1AC
 PRODUCT_NAME := lineage_mars
 
+# AviumUI Configs
+AVIUM_MAINTAINER := WilliamSado
+AVIUM_SETTINGS_SOC_MODEL_NAME := Qualcomm Snapdragon 888
+AVIUM_SETTINGS_DEVICE_CODENAME := Xiaomi 11 Pro
+AVIUM_IS_OFFICIAL := false
+WITH_GMS := true
+AVIUM_FORCE_SET_FAKE_PROP := true
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="mars_global-user 14 UKQ1.240624.001 V2.0.1.0.UKACNXM release-keys" \
     BuildFingerprint=Xiaomi/mars_global/mars:14/UKQ1.240624.001/V2.0.1.0.UKACNXM:user/release-keys \
