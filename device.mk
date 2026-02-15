@@ -25,6 +25,10 @@ PRODUCT_COPY_FILES += \
 # PowerShare
 TARGET_HAS_POWERSHARE := true
 
+# Shim
+PRODUCT_PACKAGES += \
+    libmisightjson_shim
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)

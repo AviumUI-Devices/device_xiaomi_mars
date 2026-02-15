@@ -19,6 +19,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'device/xiaomi/mars',
     'hardware/qcom-caf/sm8350',
     'hardware/xiaomi',
     'vendor/qcom/opensource/display',
@@ -76,7 +77,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libmialgoengine.so' : blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     'vendor/lib64/libmisight.so': blob_fixup()
-        .add_needed('libjsoncpp_shim.so'),
+        .add_needed('libjsoncpp_shim.so')
+        .add_needed('libmisightjson_shim.so'),
     ('vendor/lib64/vl53l5.hal@1.0.so', 'vendor/lib64/vl53l5.hal@2.0.so'): blob_fixup()
         .replace_needed('libprotobuf-cpp-full-vendor-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so'),
     'vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so': blob_fixup()
